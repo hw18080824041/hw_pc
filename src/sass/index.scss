@@ -1,0 +1,53 @@
+$width : 1000px;
+$height : 35px;
+* {
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.header{
+	width: 100%;
+	height: height;
+	.head_wap{
+		width: 100%;
+		width: 35px;
+	}
+	.header_top{
+		background: black;
+		width:$width;
+		height:$height;
+		margin: 0 auto;
+		/* border: 1px solid red; */
+		font-size: 12px;
+		color: white;
+		.top_right{
+			width: 200px;
+			height: 35px;
+			float: right;
+			line-height: 35px;
+			background: url(../images/home_05.jpg) no-repeat 95px 1px;
+			a{
+				padding: 0 20px;
+			}
+			.top_cart{
+				width: 20px;
+				height: 35px;
+			}
+		}
+		.top_left{
+			width: 100px;
+			height: $height;
+			line-height: $height;
+			padding-left: 30px;
+			float: left;
+			background:url(../images/home_03.jpg) no-repeat 0 0;
+		}
+	}
+}
+.header .header_middle{
+
+}
