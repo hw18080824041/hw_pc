@@ -14,7 +14,7 @@ $(function(){
 		$(".headerbox").html(data);
 	})*/
 	//方法三
-	$(".headerbox").load("/hw_pc/src/html/include/header.html",function(){
+	$(".headerbox").load("/html/include/header.html",function(){
 		//加载完毕后 绑定搜索建议提示事件
 		$(".search :text").on("keyup", function(){
 			let val = $(this).val(),// 当前文本框的值
@@ -44,5 +44,5 @@ $(function(){
 		});
 	});
 	/*加载尾部*/
-	$(".footerbox").load("/hw_pc/src/html/include/footer.html");
+	$(".footerbox").load("/html/include/footer.html");
 });
