@@ -1,10 +1,3 @@
-/*require(["config"], function(){
-	require(["jquery", "template", "loadHF"], function(){
-		
-	});
-});*/
-
-
 /*加载复用的头部与尾部资源*/
 $(function(){
 	//加载头部
@@ -34,28 +27,22 @@ $(function(){
 				})
 				// $(".search").append(html);
 				$(".suggest").html(html);
-
 			});
 		});
 		// 鼠标移入显示二级菜单
 		$("ul.megamenu>li:lt(3):gt(0)").hover(function(){
 			//mouseenter
 			$("#hf_list").show();
-
 		},function(){
 			//mouseleave
 			$("#hf_list").hide();
-
 		});
 		$("#hf_list").hover(function(){
 			$(this).show();
-
 		},function(){
 			$(this).hide();
-
 		});
 	});
-
 	/*加载尾部*/
 	$(".footerbox").load("/hw_pc/src/html/include/footer.html");
 });

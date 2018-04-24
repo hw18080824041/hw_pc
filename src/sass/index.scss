@@ -19,7 +19,7 @@ a{
 }
 .header{
 	width: 100%;
-	height:$height;
+	height: 168px;
 	.head_wap{
 		width: 100%;
 		height:35px;
@@ -72,8 +72,10 @@ a{
 	}
 }
 .header_footer{
-	width: 100%;
+	width: 1000px;
 	height: 44px;
+	margin: 0 auto;
+	position: relative;
 	/* border: 1px solid red; */
 	font-size: 14px;
 	.nav{
@@ -82,7 +84,7 @@ a{
 	margin: 0 auto;
 	.nav_left{
 		float: left;
-		li{
+		.wp_ul li{
 			float: left;
 			height: 44px;
 			line-height: 44px;
@@ -121,15 +123,63 @@ a{
 	}
 	}
 
+	.hf_list{
+		width: 600px;
+		height: 400px;
+		margin: 0 auto;
+		position: absolute;
+		background-color: #E9B3F9;
+		opacity: 0.8;
+		top: 44px;
+		left:0px;
+		/* border: 1px solid red; */
+		display: none;
+		.mianshuang:hover .m_list1_1{
+				display: block;
+			}
+		.m_list1 , .m_list2{
+			width: 300px;
+			height: 400px;
+			float: left;
+			h2{
+				font-weight: normal;
+				margin: 10px;
+			}
+
+			li{
+				margin: 18px 0;
+				padding-left: 10px;
+			}
+		}
+
+		.m_list1 .m_list1_1{
+			width: 80px;
+			height: 200px;
+			border: 1px solid red;
+			position: absolute;
+			top: 0px;
+			left: 60px;
+			display: none;
+			li{
+				margin-top: 24px;
+			}
+		}
+	}
+
 }
+
+
 /* banner */
 .banner{
 	width: 100%;
 	height: 485px;
 	text-align: center;
 	overflow: hidden;
-	img{
-		margin: 0 -100%;
+	.bannerBox{
+		width: 1000px;
+		height: 485px;
+		margin: 0 auto;
+		/* margin: 0 -100%; */
 	}
 }
 /* content1 */
@@ -248,6 +298,7 @@ a{
 	width: 100%;
 	height: 210px;
 	background-color:#eeeeee;
+
 	.fot_wrap{
 		width: 1000px;
 		height: 210px;
