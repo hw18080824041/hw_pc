@@ -261,8 +261,12 @@ a{
 			}
 			dd{
 				text-align: center;
+				.title{
+					width: 150px;
+					height: 50px;
+				}
 				p{
-					margin: 12px 0px;
+					margin: 12px auto;
 				}
 				.add_cart{
 					display: block;
@@ -272,7 +276,7 @@ a{
 					color: white;
 					font-size: 12px;
 					line-height: 30px;
-					margin: 0 auto;
+					margin: 50px auto;
 				}
 
 			}

@@ -209,8 +209,11 @@ a {
         float: left; }
         .content2 .con2_wrap .con2_bottom dl dd {
           text-align: center; }
+          .content2 .con2_wrap .con2_bottom dl dd .title {
+            width: 150px;
+            height: 50px; }
           .content2 .con2_wrap .con2_bottom dl dd p {
-            margin: 12px 0px; }
+            margin: 12px auto; }
           .content2 .con2_wrap .con2_bottom dl dd .add_cart {
             display: block;
             width: 100px;
@@ -219,7 +222,7 @@ a {
             color: white;
             font-size: 12px;
             line-height: 30px;
-            margin: 0 auto; }
+            margin: 50px auto; }
     .content2 .con2_wrap img {
       width: 163px; }
 
