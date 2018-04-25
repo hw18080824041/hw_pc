@@ -55,7 +55,40 @@ $(function(){
 
 		});
 	});
-
+				//$("#bannerBox").FtCarousel(0,true,1000,true,true);
 	/*加载尾部*/
 	$(".footerbox").load("/html/include/footer.html");
+});
+ //异步加载产品
+ $(function(){
+	$.getJSON("mock/tshirts.json",function(data){
+		let html = "";
+		data.res_body.products.forEach(function(prod){
+			html += `<a href="single.html"><li><img src="${prod.img}" class="img-responsive" alt=""/>
+			<span class="btn5">$${prod.price.toFixed(2)}</span>
+			<p>${prod.title}</p>
+			<p class="add_cart">${prod.addcart}</p>
+			<span class = "id" style="display:none">${prod.pid}</span>
+		</li></a>`;
+		});
+		$(".con1_wrap").prepend(html);
+	});
+
+	/*$.getJSON("/mock/tshirts.json",function(data){
+	//使用artTemplate 渲染
+		let html = template("prod_temp",{products :data.res_body.products})
+		// console.log(html);
+		//显示
+		$(".con1_wrap").prepend(html);
+
+	})*/
+
+	$.getJSON("/mock/remai.json",function(data){
+	//使用artTemplate渲染
+
+	let html = template("prod_temp",{products : data.res_body.products })
+	//console.log(html);
+	$(".con2_bottom").prepend(html);
+	});
+
 });

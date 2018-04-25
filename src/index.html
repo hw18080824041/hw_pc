@@ -2,109 +2,57 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>项目首页</title>
+	<title>项目的首页</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/ft-carousel.css">
 </head>
 <body>
 	<!-- 头部复用 -->
-		<div class="headerbox">
-			
-		</div>
-	
+		<div class="headerbox">		</div>
 <!-- banner 1000 485 -->
 <div class="banner">
-	<div class="bannerBox">
-		<img src="images/address/92907ebed22587bd96b3adba97f76058b564d8ef.jpg" alt="">
+	<div class="bannerBox" id="bannerBox">
+		<div class="example">
+			<div class="ft-carousel" id="carousel_1">
+				<ul class="carousel-inner">
+					<li class="carousel-item"><img src="/images/banner1.jpg" /></li>
+					<li class="carousel-item"><img src="/images/banner2.jpg" /></li>
+					<li class="carousel-item"><img src="/images/banner3.jpg" /></li>
+					<li class="carousel-item"><img src="/images/banner1.jpg" /></li>
+					<li class="carousel-item"><img src="/images/banner2.jpg" /></li>
+					<li class="carousel-item"><img src="/images/banner3.jpg" /></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- content 商品列表 -->
 <div class="content1">
-	<div class="con1_wrap">
-		<ul>
-			<li>
-				<a href="#">
-					<img src="images/3c844dbbf377902f944c2c89ed5775ee7dc8fb41.jpg"><br>
-				</a>
-				<a href="#" class="jianyao">新透白美肌祛斑精华液套装</a><br>
-				<a href="#" class="add_cart">加入购物车</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/3c844dbbf377902f944c2c89ed5775ee7dc8fb41.jpg"><br>
-				</a>
-				<a href="#" class="jianyao">新透白美肌祛斑精华液套装</a><br>
-				<a href="#" class="add_cart">加入购物车</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/3c844dbbf377902f944c2c89ed5775ee7dc8fb41.jpg"><br>
-				</a>
-				<a href="#" class="jianyao">新透白美肌祛斑精华液套装</a><br>
-				<a href="#" class="add_cart">加入购物车</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/3c844dbbf377902f944c2c89ed5775ee7dc8fb41.jpg"><br>
-				</a>
-				<a href="#" class="jianyao">新透白美肌祛斑精华液套装</a><br>
-				<a href="#" class="add_cart">加入购物车</a>
-			</li>
-		</ul>
-	</div>
+	<div class="con1_wrap">	</div>
 </div>
 
 <!-- content2 热卖产品 -->
 <div class="content2">
 	<div class="con2_wrap">
 		<div class="con2_top">
-			<p>最新资讯</p>
+			<p>热卖产品</p>
 		</div>
 	<div class="con2_bottom">
-		<dl>
-			<dt><a href="#"><img src="images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"></a></dt>
-			<dd>
-				<p><a href="#">红妍肌活精华露</a></p>
-				<p>50ml</p>
-				<p>￥ 860</p>
-				<a href="#" class="add_cart">加入购物车</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt><a href="#"><img src="images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"></a></dt>
-			<dd>
-				<p><a href="#">红妍肌活精华露</a></p>
-				<p>50ml</p>
-				<p>￥ 860</p>
-				<a href="#" class="add_cart">加入购物车</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt><a href="#"><img src="images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"></a></dt>
-			<dd>
-				<p><a href="#">红妍肌活精华露</a></p>
-				<p>50ml</p>
-				<p>￥ 860</p>
-				<a href="#" class="add_cart">加入购物车</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt><a href="#"><img src="images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"></a></dt>
-			<dd>
-				<p><a href="#">红妍肌活精华露</a></p>
-				<p>50ml</p>
-				<p>￥ 860</p>
-				<a href="#" class="add_cart">加入购物车</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt><a href="#"><img src="images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"></a></dt>
-			<dd>
-				<p><a href="#">红妍肌活精华露</a></p>
-				<p>50ml</p>
-				<p>￥ 860</p>
-				<a href="#" class="add_cart">加入购物车</a>
-			</dd>
-		</dl>
+		<!-- artTemplate -->
+		<script type="text/html" id="prod_temp">
+				{{ each products prod}}
+			<dl>
+					<dt><a href="#"><img src="{{prod.img}}"></a></dt>
+				<dd>
+					<p><a href="#">{{prod.title}}</a></p>
+					<p>{{prod.capacity}}</p>
+					<p>￥ {{prod.price}}</p>
+					<a href="#" class="add_cart">{{prod.cart}}</a>
+					<span class="id" style="display: none;">{{prod.pid}}</span>
+				</dd>
+			</dl>
+				{{/each}}
+		</script>
 	</div>
 	</div>
 	
@@ -116,17 +64,13 @@
 	</div>
 	<div class="con3_bottom">
 		<a href="#">
-			<img src="images/b97da0de72812fd32f27761d169a94a2c5f57d23.jpg">
+			<img src="images/banner1.jpg">
 		</a>
 	</div>
 </div>
-
 <!-- 尾部footer -->
-<div class="footerbox">
-	
-</div>
+<div class="footerbox"></div>
 <!-- footer完 -->
-
 <!-- 右侧返回顶部 -->
 <div class="backTop">
 	<ul>
@@ -136,9 +80,14 @@
 		<li class="top"><a href="#"></a></li>
 	</ul>
 </div>
-
 <!-- 结束 -->
 <script  src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+<script src="js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
 <script  src="js/index.js"></script>
+<script type="text/javascript" src="lib/art-template/template-web.js"></script>
+<script type="text/javascript">
+	$("#carousel_1").FtCarousel(0,true,1000,true,true);
+</script>
 </body>
 </html>

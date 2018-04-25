@@ -3,17 +3,70 @@
 <head>
 	<meta charset="UTF-8">
 	<title>购物车页面</title>
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
-
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href='/css/fonts.useso.css' rel='stylesheet' type='text/css'>
+	<!-- <link href="../css/megamenu.css" rel="stylesheet" type="text/css" media="all" /> -->
+	
 </head>
 <body>
 	<!-- 头部 -->
 	<div class="headerbox"></div>
-	<h1>购物车</h1>
+
+		<div class="men cart cart_empty">
+		    <h1>It appears that your cart is currently empty!</h1>
+		    <h2>You can continue browsing <a href="/index.html">here</a>.</h2>
+	    </div>
+		
+		<div class="cart prod_list">
+			
+		</div>
+		<!-- 模板 -->
+			<script type="text/html" id="prod_list_temp">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+						<th><label><input type="checkbox" id="ck_all">全选</label></th>
+						<th>商品图片</th>
+						<th>描述</th>
+						<th>价格</th>
+						<th class="col-md-2">数量</th>
+						<th>小计</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody class="cart_body">
+						{{each products prod}}
+						<tr>
+							<td><input type="checkbox" class="ck_prod"></td>
+							<td><img class="prod_img" src="{{prod.img}}"></td>
+							<td class="prod_title">{{prod.title}}</td>
+							<td class="prod_price">{{prod.price}}</td>
+							<td class="input-group">
+								<span class="input-group-addon minus" data-id="{{prod.pid}}">-</span>
+								<input type="text" class="form-control amount" data-id="{{prod.pid}}" value="{{prod.amount}}">
+								<span class="input-group-addon add" data-id="{{prod.pid}}">+</span>
+							</td>
+							<td class="sub">{{(prod.price*prod.amount).toFixed(2)}}</td>
+							<td><a href="javascript:void(0);" class="del" data-id="{{prod.pid}}">删除</a></td>
+
+						</tr>
+						{{/each}}
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>合计</td>
+							<td colspan="6" class="total">$0.00</td>
+						</tr>
+					</tfoot>
+				</table>
+			</script>
+
 	<!-- 尾部 -->
 	<div class="footerbox"></div>
 
-	<script  src="../lib/jquery/jquery-1.12.4.min.js"></script>
-	<script  src="../js/cart.js"></script>
+	<script  src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/lib/jquery-plugins/jquery.cookie.js"></script>
+	<script  src="/js/cart.js"></script>
 </body>
 </html>

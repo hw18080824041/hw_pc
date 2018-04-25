@@ -1,0 +1,15 @@
+{
+	"res_code":"0",
+	"res_error":"",
+	"res_body":{
+		"products":[
+			{"pid":2, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"},
+			{"pid":2, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/ad0397e4256f738a97d59d9dab4a735440050eb6.jpg"},
+			{"pid":2, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"},
+			{"pid":2, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"},
+			{"pid":2, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"}
+
+		]
+	}
+}
+
