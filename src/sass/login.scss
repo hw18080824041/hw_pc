@@ -1,7 +1,6 @@
 .middle{
 	width: 1100px;
-	height: 1000px;
-	border: 1px solid red;
+	height: 1100px;
 	margin: 0 auto;
 	.login_top{
 		width: 100%;
@@ -16,11 +15,17 @@
 	.login_bottom{
 		width: 100%;
 		height: 920px;
+		.leftwrap{
+			width: 480px;
+			height: 800px;
+			float: left;
+		}
 		.bt_left{
-			width: 423px;
-			height: 444px;
+			width: 480px;
+			height: 470px;
 			border: 1px solid #888;
 			text-align: center;
+			/* float: left; */
 			h3{
 				font-weight: normal;
 				font-size: 18px;
@@ -34,7 +39,7 @@
 			.username ,.password{
 				width: 180px;
 				height: 25px;
-				margin: 5px 0;
+				margin: 10px 0;
 			}
 			p{
 				line-height: 25px;
@@ -101,4 +106,87 @@
 
 	}
 
+}
+.bt_right{
+	width: 550px;
+	height: 800px;
+	border: 1px solid #888;
+	float: right;
+	text-align: center;
+	font-size: 14px;
+	h3{
+		font-size: 18px;
+		font-weight: normal;
+		margin-top: 30px;
+	}
+	.p1{
+		margin: 10px 0;
+	}
+	input{
+		width: 180px;
+		height: 25px;
+		margin: 10px 0;
+	}
+	.p2 i{
+color: #CA5B5B;
+	}
+	.vcode{
+		width: 80px;
+	}
+	.p3 a{
+		color: #5E7AEB;
+	}
+	.yan{
+		width: 180px;
+		height: 40px;
+		margin: 0 auto;
+		text-align: left;
+		.code{
+			width: 100px;
+		}
+		.send{
+		color: #5E7AEB;
+
+		}
+
+	}
+	.p4{
+		margin-top: 15px;
+	}
+	.sex{
+		width: 12px;
+		height: 12px;
+	}
+	.p5{
+		text-align: left;
+		margin-top: 20px;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		border-top: 1px dotted #888;
+	}
+	.tiaokuan{
+		width: 540px;
+		height: 80px;
+		margin: 0 auto;
+		overflow: auto;
+		border: 1px solid #888;
+		text-align: left;
+		text-indent: 2em;
+	}
+	.read{
+		width: 12px;
+		height: 12px;
+		margin-right: 3px;
+		margin-left: 290px;
+	}
+	.p6 a{
+		margin-top: 15px;
+		display: inline-block;
+		line-height: 30px;
+		color: white;
+		width: 100px;
+		height: 30px;
+		background-color: #910606;
+	}
 }

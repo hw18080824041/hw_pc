@@ -30,7 +30,7 @@ $(function(){
 			});
 		});
 		// 鼠标移入显示二级菜单
-		$("ul.megamenu>li:lt(3):gt(0)").hover(function(){
+		/*$("ul.megamenu>li:lt(3):gt(0)").hover(function(){
 			//mouseenter
 			$("#hf_list").show();
 		},function(){
@@ -41,7 +41,7 @@ $(function(){
 			$(this).show();
 		},function(){
 			$(this).hide();
-		});
+		});*/
 	});
 	/*加载尾部*/
 	$(".footerbox").load("/html/include/footer.html");

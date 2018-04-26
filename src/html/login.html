@@ -21,8 +21,8 @@
 		</div>
 
 		<div class="login_bottom">
-
-			<form class="bt_left">
+			<div class="leftwrap">
+				<form class="bt_left">
 				<h3>已经是会员</h3>
 				<p>马上登陆获得更多会员资讯</p>
 				<input type="text" class="username" name="" placeholder="手机号码/电子邮箱">
@@ -41,8 +41,50 @@
 					<p><a href="#" style="color: #5E7AEB;">使用邮箱找回</a></p>
 					<p><a href="#" style="color: #5E7AEB;">使用手机找回</a></p>
 				</div>
+			</div>
+			
 			<form class="bt_right">
-				
+				<h3>加入会员</h3>
+				<p class="p1">成为资生堂花庄会员，体验各种为您量身定制的奢享礼遇</p>
+				<input type="text" placeholder="电子邮箱" name=""><br>
+				<input type="password" placeholder="密码" name="">
+				<p class="p2"><i>密码必须是6位以上字母和数字组成，可以包含符号。</i></p>
+				<input type="password" placeholder="密码确认" name=""><br>
+				<input type="text" class="vcode" placeholder="图形码验证" name="">
+				<p class="p3"><a href="#">看不清楚?换一个</a></p>
+				<input type="text" placeholder="手机" name=""><br>
+				<div class="yan">
+					<input type="text" class="code" placeholder="验证码" name="">
+					<a href="#" class="send">发送验证码</a>
+				</div>
+				<input type="text" placeholder="姓名" name="">
+				<p class="p4"><span>出生日期： </span></p>
+				<p class="p2"><i>(出生年月一旦保存后不能修改、请妥善填写。)</i></p>
+				性别：<input type="radio" name="sex" class="sex"> 女性 
+						<input type="radio" name="sex" class="sex">  男性<br>
+				电子快报：<input type="radio" name="book" class="sex"> 订阅						<input type="radio" name="book" class="sex">  不订阅<br>
+				<p class="p5">个人情报保护方针:</p>
+				<div class="tiaokuan">
+					   SHISEIDO资生堂非常重视对您隐私的保护，在您使用SHISEIDO资生堂官方网站暨网上商城提供的服务前，请您仔细阅读以下声明。为了给您提供更准确、更有个性化的服务，SHISEIDO资生堂可能会以如下方式，使用您提交的个人信息，但SHISEIDO资生堂会以高度的勤勉、审慎义务对待这些信息。
+1. 保有您提供的信息 SHISEIDO资生堂官方网站暨网上商城会在您自愿选择服务或提供信息的情况下收集您的个人信息，并将这些信息进行整合，以便向您提供更好的用户服务。请您在注册时及时、详尽及准确地提供个人资料，并不断更新注册资料，符合及时、详尽准确的要求。如果因您注册信息不真实而导致的任何问题，由您自行承担相应的后果。请您不要将您的帐号、密码转让或 出借予他人使用。如您发现您的帐号遭他人非法使用，应立即通知SHISEIDO资生堂。因黑客行为或用户的保管疏忽导致帐号、密码遭他人非法使用，SHISEIDO资生堂不承担责任。
+2. cookies等技术的使用 SHISEIDO资生堂官方网站暨网上商城使用cookies，以便您能登录我们的服务，并允许设定您特定的服务选项。运用cookies技术，SHISEIDO资生堂官方网站暨网上商城能够为您提供更加周到的个性化服务。您可以选择接受或拒绝 cookies。您可以通过修改浏览器设置的方式拒绝cookies。如果您选择拒绝cookies，则您可能无法登录或使用依赖于cookies 的SHISEIDO资生堂官方网站暨网上商城服务或功能。
+3. 保有您的使用记录 当您使用SHISEIDO资生堂官方网站暨网上商城提供的服务时，服务器会自动记录一些信息，包括URL、IP地址、浏览器的类型和使用的语言以及访问日期和时间等。
+4. 保护用户的隐私SHISEIDO资生堂的一项基本政策，在未征得您许可的情况下，SHISEIDO资生堂不会对外披露您的个人信息。 但下列情况除外： 
+（1）事先获得您的授权； 
+（2）只有透露您的个人资料，才能提供您所要求的产品和服务； 
+（3）根据有关的法律法规要求； 
+（4）按照相关政府主管部门的要求； 
+（5）为维护SHISEIDO资生堂以及SHISEIDO资生堂官方网站暨网上商城的合法权益； 
+（6）您同意让第三方共享资料； 
+（7）根据本声明的其他规定及SHISEIDO资生堂认为其他必要情形；
+5. 为保障您的隐私安全并提供更优质的服务，您的上述信息将有可能共享给境内外资生堂集团关联公司及其第三方服务供应商，用于数据分析、信息推送等。 更多细节请点击。
+6. 在不透露单个用户隐私资料的前提下，SHISEIDO资生堂有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。SHISEIDO资生堂会始终致力于在充分保护您隐私的前提下，为您提供更优质的体验和服务。
+				</div>
+				<input type="radio" name="" class="sex read"><span> 我已阅读并接受了购物条款</span>
+				<p class="p6">
+					<a href="#">身份绑定</a>
+					<a href="#">注册</a>
+				</p>
 			</form>
 		</div>
 	</div>
@@ -53,7 +95,7 @@
 
 
 	<script  src="/lib/jquery/jquery-1.12.4.min.js"></script>
-	<script  src="/js/index.js"></script>
+	<script  src="/js/login.js"></script>
 	<!-- <script type="text/javascript" src="/lib/art-template/template-web.js"></script> -->
 </body>
 </html>
