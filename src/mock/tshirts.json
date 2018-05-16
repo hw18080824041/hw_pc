@@ -3,10 +3,10 @@
 	"res_error":"",
 	"res_body":{
 		"products":[
-			{"pid":2, "title":"新透白美肌祛斑精华液套装", "price":222,"addcart":"加入购物车", "img":"/images/3c844dbbf377902f944c2c89ed5775ee7dc8fb41.jpg"},
-			{"pid":3, "title":"时光琉璃卸藏系列", "price":388, "addcart":"加入购物车","img":"images/b57bd59ff9d82ee11c70574400262a77c96e98d1.png"},
-			{"pid":4, "title":" 小针管抗皱霜 ", "price":266, "addcart":"加入购物车","img":"images/a0ee597b767d5f189a3857a8811b17564757664b.png"},
-			{"pid":5, "title":"新透白美肌祛斑精华液套装", "addcart":"加入购物车","price":378, "img":"/images/521e43c1f2dc3fdd5c9f11dc0c5f55601415c097.png"}
+			{"pid":1, "title":"新透白美肌祛斑精华液套装", "price":222,"addcart":"加入购物车", "img":"/images/3c844dbbf377902f944c2c89ed5775ee7dc8fb41.jpg"},
+			{"pid":2, "title":"时光琉璃卸藏系列", "price":388, "addcart":"加入购物车","img":"images/b57bd59ff9d82ee11c70574400262a77c96e98d1.png"},
+			{"pid":3, "title":" 小针管抗皱霜 ", "price":266, "addcart":"加入购物车","img":"images/a0ee597b767d5f189a3857a8811b17564757664b.png"},
+			{"pid":4, "title":"新透白美肌祛斑精华液套装", "addcart":"加入购物车","price":378, "img":"/images/521e43c1f2dc3fdd5c9f11dc0c5f55601415c097.png"}
 		]
 	}
 }
