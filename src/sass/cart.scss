@@ -1,0 +1,26 @@
+.cart_empty{
+    width: 1000px;
+    height: 500px;
+   // border: 1px solid #000;
+    text-align: center;
+    margin: 0 auto;
+    background: rgb(207, 202, 202);
+    overflow: hidden;
+
+   h3,h4{
+       font-size: 40px;
+       margin-top: 100px;
+        a{
+            font-style: italic;
+           color: rgb(129, 87, 94);
+       }
+   }
+}
+.prod_list{
+    width: 1000px;
+    margin: 50px auto;
+    min-height: 50px;
+}
+tbody tr td img{
+    width: 46px;
+}

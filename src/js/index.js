@@ -61,7 +61,7 @@ $(function () {
 			html += `<li><a href="#"><img src="${prod.img}" class="img-responsive" alt=""/></a>
 			<span class="price">$${prod.price.toFixed(2)}</span>
 			<p class="desc">${prod.title}</p>
-			<p class="add_cart"><a href="#">${prod.addcart}</a></p>
+			<p class="add_cart"><a href="javascript:void(0)" >${prod.addcart}</a></p>
 			<span class = "id" style="display:none">${prod.pid}</span>
 		</li>`;
 		});
@@ -104,22 +104,41 @@ $(function () {
 			img: box.children().children(".img-responsive").attr("src"),
 			amount: 1
 		};
-		console.log(currentProduct);
 
 		//配置cookie 使用 自动json转换
+
 		$.cookie.json = true;
 		
 		//先读取已有的购物车cookie
 		var products = $.cookie("products") || [];
 		//判断已选商品中是否当前商品被选中过
+		//console.log("a");
+				
 		var index = exist(currentProduct.id, products);
+		//console.log(index);
+		
 		 if (index !== -1) {
 			products[index].amount++;
 		} else {
 			products.push(currentProduct);
 		} 
-
-
+		//使用cookie保存购物车数据
+		$.cookie("products",products,{expires:7,path:"/"});
+		//保存成功 则添加抛物线效果
+		var flyer = $(`<img style="width:50px; height:50px" src="${currentProduct.img}">`),
+			offset = $(".top_cart").offset();
+		flyer.fly({
+			start :{
+				left :e.pageX,
+				top:e.pageY
+			},
+			end : {
+				left:offset.left,
+				top:offset.top,
+				width:0,
+				height:0
+			}
+		});
 
 	});
 

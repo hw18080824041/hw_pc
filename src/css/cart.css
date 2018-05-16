@@ -1,0 +1,21 @@
+.cart_empty {
+  width: 1000px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background: #cfcaca;
+  overflow: hidden; }
+  .cart_empty h3, .cart_empty h4 {
+    font-size: 40px;
+    margin-top: 100px; }
+    .cart_empty h3 a, .cart_empty h4 a {
+      font-style: italic;
+      color: #81575e; }
+
+.prod_list {
+  width: 1000px;
+  margin: 50px auto;
+  min-height: 50px; }
+
+tbody tr td img {
+  width: 46px; }

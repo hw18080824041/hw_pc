@@ -58,15 +58,21 @@ $(function(){
 	let _products = $.cookie("products") || [];
 	if (_products.length === 0){//说明购物车没有数据
 		$(".cart_empty").show()
-						.next(".prod_list").hide();
+		.next(".prod_list").hide();
 		return;				
-	}
-	//显示读取的cookie 购物车数据
+	} 
+	//显示读取的cookie 购物车数据 用artTemplate来渲染
 	let html = template("prod_list_temp",{products:_products});
-	/*console.log(html);*/
+	console.log(html);
+	
+	//显示到表格中
 	$(".cart_empty").hide()
-					.next(".prod_list").show()
-					.html(html);
+					.next(".prod_list").show();
+	$("tbody").html(html);				
+					
+	// $(".cart_empty").hide()
+	// 				.next(".prod_list").show()
+	// 				.html(html);
 
 
 	/*删除*/
