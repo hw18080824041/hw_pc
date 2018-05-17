@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .cart_empty {
   width: 1000px;
   height: 500px;
@@ -12,10 +17,24 @@
       font-style: italic;
       color: #81575e; }
 
-.prod_list {
+#cart_list {
   width: 1000px;
   margin: 50px auto;
-  min-height: 50px; }
+  min-height: 50px;
+  text-align: center; }
+  #cart_list thead tr th {
+    text-align: center; }
+  #cart_list #tbody td {
+    height: 46px;
+    line-height: 50px; }
+  #cart_list #tbody .input-group {
+    padding-top: 15px; }
+    #cart_list #tbody .input-group .amount {
+      text-align: center; }
+  #cart_list tfoot {
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700; }
 
 tbody tr td img {
   width: 46px; }

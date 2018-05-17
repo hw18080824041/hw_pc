@@ -59,8 +59,8 @@ $(function () {
 		let html = "";
 		data.res_body.products.forEach(function (prod) {
 			html += `<li><a href="#"><img src="${prod.img}" class="img-responsive" alt=""/></a>
-			<span class="price">$${prod.price.toFixed(2)}</span>
-			<p class="desc">${prod.title}</p>
+			<span class="price">${prod.price.toFixed(2)}</span>
+			<p class="title">${prod.title}</p>
 			<p class="add_cart"><a href="javascript:void(0)" >${prod.addcart}</a></p>
 			<span class = "id" style="display:none">${prod.pid}</span>
 		</li>`;
@@ -100,7 +100,7 @@ $(function () {
 		var currentProduct = {
 			id: box.children(".id").text(),
 			price: box.children(".price").text(),
-			desc: box.children(".desc").text(),
+			title: box.children(".title").text(),
 			img: box.children().children(".img-responsive").attr("src"),
 			amount: 1
 		};

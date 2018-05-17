@@ -22,21 +22,22 @@
 			<a href="/index.html">here</a>.</h4>
 	</div>
 
-	<div class="cart prod_list">
+	<div class="cart prod_list" id="cart_list">
 		<table class="container table">
 			<thead>
 				<tr>
-					<th><input type="checkbox" class="ck_all"> 全选 </th>
-					<th>序号</th>
-					<th>商品图片</th>
-					<th>商品描述</th>
-					<th>单价</th>
-					<th>数量</th>
-					<th>小计</th>
-					<th>操作</th>
+					<th class="col-md-1">
+						<input type="checkbox" class="ck_all"> 全选 </th>
+					<th class="col-md-1">序号</th>
+					<th class="col-md-1">商品图片</th>
+					<th class="col-md-3">商品描述</th>
+					<th class="col-md-1">单价(元)</th>
+					<th class="col-md-2">数量</th>
+					<th class="col-md-2">小计(元)</th>
+					<th class="col-md-1">操作</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="tbody">
 
 			</tbody>
 			<tfoot>
@@ -51,7 +52,7 @@
 				
 						{{each products prod}}
 						<tr>
-							<td><input type="checkbox" class="ck_prod"></td>
+							<td ><input type="checkbox" class="ck_prod"></td>
 							<td class="id">{{prod.id}}</td>
 							<td><img class="prod_img" src="{{prod.img}}"></td>
 							<td class="title">{{prod.title}}</td>
@@ -62,7 +63,7 @@
 								<span class="input-group-addon add" data-id="{{prod.pid}}">+</span>
 							</td>
 							<td class="sub">{{(prod.price*prod.amount).toFixed(2)}}</td>
-							<td><a href="javascript:void(0);" class="del" data-id="{{prod.pid}}">删除</a></td>
+							<td><a href="javascript:void(0);" class="del" data-id="{{prod.pid}}"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>删除</a></td>
 
 						</tr>
 						{{/each}}
