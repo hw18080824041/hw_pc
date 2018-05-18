@@ -21,7 +21,35 @@
        }
    }
 }
+#shooping-step{
+    width: 1000px;
+    height: 50px;
+    margin: 50px auto;
 
+    ul{
+        width: 600px;
+        height: 50px;
+        li,span{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            
+        }
+        li{
+            width: 110px;
+            text-align: center;
+            font-size: 15px;
+            background: #a7a9ac;
+        }
+        span{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background: url(../images/home_105.jpg ) no-repeat center center ;
+        }
+    }
+    
+}
 #cart_list{
     width: 1000px;
     margin: 50px auto;
@@ -32,7 +60,7 @@
     }
    #tbody td{
         height: 46px;
-        line-height: 50px ;
+        line-height: 50px;
    }
    #tbody .input-group{
        padding-top: 15px;
@@ -44,10 +72,37 @@
        height:50px;
        font-size: 15px;
        font-weight: 700;
+       
       // border: 1px solid #000;
+      .goon{
+          width: 60px;
+          height: 30px;
+
+         // border: 1px solid #000;
+      }
    }
 
 }
 tbody tr td img{
     width: 46px;
+} 
+.safeguard{
+    height: 50px;
+    background: rgb(223, 218, 218);
+    line-height: 50px;
+    span{
+        color:#851d13;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .sa1{
+        background: url(/images/icon_official.png) no-repeat 106px center;
+    }
+    .sa2{
+        background: url(/images/icon_free.png) no-repeat 106px center;
+    }
+    .sa3{
+        background: url(/images/icon_security.png) no-repeat 106px center;
+    }
+    
 }

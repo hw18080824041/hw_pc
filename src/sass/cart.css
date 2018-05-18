@@ -23,6 +23,37 @@
   color: #81575e;
 }
 
+#shooping-step {
+  width: 1000px;
+  height: 50px;
+  margin: 50px auto;
+}
+
+#shooping-step ul {
+  width: 600px;
+  height: 50px;
+}
+
+#shooping-step ul li, #shooping-step ul span {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+}
+
+#shooping-step ul li {
+  width: 110px;
+  text-align: center;
+  font-size: 15px;
+  background: #a7a9ac;
+}
+
+#shooping-step ul span {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: url(../images/home_105.jpg) no-repeat center center;
+}
+
 #cart_list {
   width: 1000px;
   margin: 50px auto;
@@ -53,6 +84,35 @@
   font-weight: 700;
 }
 
+#cart_list tfoot .goon {
+  width: 60px;
+  height: 30px;
+}
+
 tbody tr td img {
   width: 46px;
+}
+
+.safeguard {
+  height: 50px;
+  background: #dfdada;
+  line-height: 50px;
+}
+
+.safeguard span {
+  color: #851d13;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.safeguard .sa1 {
+  background: url(/images/icon_official.png) no-repeat 106px center;
+}
+
+.safeguard .sa2 {
+  background: url(/images/icon_free.png) no-repeat 106px center;
+}
+
+.safeguard .sa3 {
+  background: url(/images/icon_security.png) no-repeat 106px center;
 }

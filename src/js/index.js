@@ -1,3 +1,10 @@
+//依赖配置
+/* require(["config"],function(){
+	require(["jquery","template","cookie","fly","loadHF"],function(){
+
+	});
+}); */
+
 
 /*加载复用的头部与尾部资源*/
 $(function () {
@@ -18,6 +25,11 @@ $(function () {
 	$(".headerbox").load("/html/include/header.html", function () {
 		//加载完毕后 绑定搜索建议提示事件
 		$(".search :text").on("keyup", function () {
+			//输入时让suggest显示
+			$(".suggest").css("display","block")
+			//console.log("a");
+			
+			$(".suggest").css("display","block");
 			let val = $(this).val(),// 当前文本框的值
 				url = `https://suggest.taobao.com/sug?callback=?&q=${val}&code=utf-8`
 			$.getJSON(url, function (data) {
@@ -30,6 +42,11 @@ $(function () {
 				$(".suggest").html(html);
 
 			});
+		});
+		//收缩失去焦点隐藏盒子
+
+		$(".search :text").on("blur",function(){
+			$(".suggest").css("display","none");
 		});
 		// 鼠标移入显示二级菜单
 		$("ul.megamenu>li:lt(3):gt(0)").hover(function () {
@@ -127,11 +144,13 @@ $(function () {
 		//保存成功 则添加抛物线效果
 		var flyer = $(`<img style="width:50px; height:50px" src="${currentProduct.img}">`),
 			offset = $(".top_cart").offset();
+			
 		flyer.fly({
 			start :{
-				left :e.pageX,
-				top:e.pageY
+				left : e.pageX,
+				top : e.pageY
 			},
+			
 			end : {
 				left:offset.left,
 				top:offset.top,

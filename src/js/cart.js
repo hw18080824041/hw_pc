@@ -82,168 +82,115 @@ $(function () {
 			//在数组中的下标
 			var index = exist(_id, _products);
 			//从数组中删除
-			_products.splice(index,1);
+			_products.splice(index, 1);
 			//再存回到cookie中
-			$.cookie("products",_products,{expires:7,path:"/"});
+			$.cookie("products", _products, { expires: 7, path: "/" });
 			//再从dom中删除节点
 			row.remove();
+			//计算合计
+			calcTotalPrice();
 
 
-			/* 计算合计 */
 
 
-			
-			
+
 		});
-		
-		/* 修改数量  加减+-*/
-		$("#tbody").on("click",".minus,.add",function(){
-				//获取行
-				var row = $(this).parents("tr");
-				//获取id
-				var _id = row.data("id");
-				//数组中的下标
-				var index = exist(_id, _products)
-				//使用变量暂存index索引处
-				var prod = _products[index];
-				//修改数量
-				if($(this).is(".add"))
-				prod.amount++;
-				else if($(this).is(".minus")){
-					prod.amount--;
-				}	
-				// 修改cookIe
-				$.cookie("products",_products,{expires:7,path:"/"});
-				//显示修改后的数量与小计
-				row.find(".amount").val(prod.amount);
-				row.find(".sub").text((prod.price*prod.amount).toFixed(2));
 
-			});
-			
-			console.log("a");
+		/* 修改数量  加减+-*/
+		$("#tbody").on("click", ".minus,.add", function () {
+			//获取行
+			var row = $(this).parents("tr");
+			//获取id
+			var _id = row.data("id");
+			//数组中的下标
+			var index = exist(_id, _products)
+			//使用变量暂存index索引处
+			var prod = _products[index];
+			//修改数量
+			if ($(this).is(".add"))
+				prod.amount++;
+			else if ($(this).is(".minus")) {
+				prod.amount--;
+			}
+			// 修改cookIe
+			$.cookie("products", _products, { expires: 7, path: "/" });
+			//显示修改后的数量与小计
+			row.find(".amount").val(prod.amount);
+			row.find(".sub").text((prod.price * prod.amount).toFixed(2));
+			//计算合计
+			calcTotalPrice();
+		});
+		//修改 input内数量 
+		$("#tbody").on("blur", ".amount", function () {
+			// 行 
+			var row = $(this).parents("tr");
+			// id
+			var _id = row.data("id");
+			// index
+			var index = exist(_id, _products);
+			//商品
+			var prod = _products[index];
+			//获取输入值
+			var inputAmount = $(this).val();
+			//判断输入值
+			if (!/^[1-9]\d*$/.test(inputAmount)) {
+				$(this).val(prod.amount);
+				return;
+			}
+			//将商品的数量属性值修改为当前输入值
+			prod.amount = inputAmount;
+			//然后保存在cookie中
+			$.cookie("[products", _products, { expires: 7, path: "/" });
+			//显示小计
+			row.find(".sub").text((prod.price * prod.amount).toFixed(2));
+			//计算合计
+			calcTotalPrice();
+		});
+		/* ************ */
+		/* 全选 部分选中  */
+		/* ***************** */
+		$(".ck_all").click(function () {
+			//获取当前全选 复选框选中状态
+			var status = $(this).prop("checked");
+			//设置商品当前复选框与全选状态一致
+			$(".ck_prod").prop("checked", status);
+			//计算合计
+			calcTotalPrice();
+
+		});
+		//判断已勾选框的商品行前复选框个数与_products数组长度是否一致，确定是否全选
+		$(".ck_prod").click(function () {
+			var b = $(".ck_prod:checked").length === _products.length;
+			$(".ck_all").prop("checked", b);
+			//计算合计
+			calcTotalPrice();
+
+		});
 
 
 		//判断指定的id的商品在数组中的下标
-		function exist(id,products){
-			for(var i = 0, len = products.length; i<len; i++){
-				if(products[i].id == id){
+		function exist(id, products) {
+			for (var i = 0, len = products.length; i < len; i++) {
+				if (products[i].id == id) {
 					return i;
 				}
 			}
 			return -1;
-		}
+		};
+		//计算合计
+		function calcTotalPrice() {
+			var total = 0;
+			//遍历jQuery对象中的每个DOM元素
+			$(".ck_prod:checked").each(function (index, element) {
+				total += Number($(this).parents("tr").find(".sub").text())
+			});
+			// 显示合计金额
+			$(".total_pay").text(total.toFixed(2));
 
+			//	console.log(total);
+		};
+		calcTotalPrice();
 	});
 
-
-
-
-
-
-	/*删除*/
-	// 	$(".cart_body").on("click","a.del",function(){
-	// 		//当前待删除商品的编号  在数组中的索引
-	// 		let _id = $(this).data("id"),
-	// 			_index = exist(_id,_products);
-	// 		//从数组中删除_index索引处的元素
-	// 		_products.splice(_index,1);
-	// 		//从cookie中移出部分数据 从dom数中删除节点
-	// 		$.cookie("products",_products,{expires:7,path:"/"});
-	// 		$(this).parents("tr").remove();
-	// 		if (_products.length === 0){//说明购物车没有数据
-	// 		$(".cart_empty").show()
-	// 						.next(".prod_list").hide();
-	// 	}
-	// 	//计算合计
-	// 		calcTotal();
-	// 	});
-
-	// 	/*数量加减*/
-	// 	$(".cart_body").on("click",".add,.minus",function(){
-	// 		//获取修改后的数量
-	// 		let _id = $(this).data("id");
-	// 		//获取数组中的元素下标
-	// 		let _index = exist(_id, _products);
-	// 		/*数量加减*/
-	// 		if ($(this).is(".add"))
-	// 			_products[_index].amount++;
-	// 		else {
-	// 			if(_products[_index].amount <= 1)
-	// 				return;
-	// 			_products[_index].amount--;
-	// 		};
-
-	// /*覆盖保存coolie*/
-	// 	$.cookie("products",_products,{expires:7,path:"/"});
-	// 	//显示修改结果
-	// 	$(this).siblings(".amount").val(_products[_index].amount);
-	// 	//显示小计
-	// 	let _sub = _products[_index].price * _products[_index].amount;
-	// 	$(this).parent().next().text(_sub.toFixed(2));
-	// 	//计算合计
-	// 		calcTotal();
-	// 	});
-	// /*输入修改*/
-	// 	$(".cart_body").on("blur",".amount",function(){
-	// 		//获取修改后的数量的商品id
-	// 		let _id = $(this).data("id");
-	// 		// console.log(_id);
-	// 		//获取数组中的元素下标
-	// 		let _index = exist(_id, _products);
-	// 		//console.log(_index);
-	// 		/*判断输入数据的格式*/
-	// 		if(!/^[1-9]\d*$/.test($(this).val())){
-	// 			$(this).val(_products[_index].amount);
-	// 			return;
-	// 		}
-
-	// 		/*修改数组中对应元素的数量*/
-	// 		_products[_index].amount = $(this).val();
-
-	// /*覆盖保存coolie*/
-	// 	$.cookie("products",_products,{expires:7,path:"/"});
-	// 	//显示修改结果
-	// 	//$(this).siblings(".amount").val(_products[_index].amount);
-	// 	//显示小计
-	// 	let _sub = _products[_index].price * _products[_index].amount;
-	// 	$(this).parent().next().text(_sub.toFixed(2));
-	// //计算合计
-	// 		calcTotal();
-	// 	});
-	// /*全选*/
-	// 	$("#ck_all").on("click",function(){
-	// 		/*获取当前全选的选中状态*/
-	// 		let _status = $(this).prop("checked");
-	// 		//设置所有商品行前复选框选中状态
-	// 		$(".ck_prod").prop("checked",_status);
-	// 		//计算合计
-	// 		calcTotal();
-	// 	});
-
-	// 	$(".ck_prod").on("click",function(){
-	// 		let _status = $(".ck_prod:checked").length === _products.length;
-	// 		$("#ck_all").prop("checked",_status);
-	// 		//计算合计
-	// 		calcTotal();
-	// 	});
-	// 	// 找出 id 对应商品在 prodcuts 中下标
-	// 	function exist(id,products){
-	//  			var existIndex = -1;
-	//  			$.each(products,function(index,prod){
-	// 	 			if (prod.pid == id) {
-	// 	 				existIndex = index;
-	// 	 				return false;
-	// 	 			}
-	//  			});
-	//  		return existIndex;
-	//  		}
-	//  		/*计算合计*/
-	//  		function calcTotal(){
-	//  			let sum = 0;
-	//  			$(".ck_prod:checked").each(function(index,element){
-	//  				sum += Number($(this).parents("tr").find(".sub").text());
-	//  			});
-	//  			$(".total").text("$" + sum.toFixed(2));
-	//  		}
 });
 
