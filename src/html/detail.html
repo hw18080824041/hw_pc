@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/index.css">
 	<link rel="stylesheet" href="/css/detail.css">
-	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
 	<title>商品详情</title>
 </head>
 
@@ -22,7 +22,7 @@
 		<div class="main_right">
 			<!-- 商品图片 -->
 			<div class="m_pic">
-				<img src="/images/haha1.jpg" alt="">
+				<img src="/images/sadf.jpg" alt="">
 			</div>
 			<div class="introduce">
 				<h4>资生堂悦薇珀翡塑颜抗皱霜 </h4>
@@ -38,8 +38,17 @@
 				<div class="to_buy">
 						<div class="cont to_buy_up">
 							<div class="to_buy_up_left"> 
-
-								数量 : <span>-</span><input type="text"><span>+</span>
+								<form class="form-inline">
+									<div class="form-group">
+									  <!-- <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label> -->
+									  <div class="input-group">
+										<div class="input-group-addon">+</div>
+										<input type="text" class="form-control" id="exampleInputAmount" value="1">
+										<div class="input-group-addon">-</div>
+									  </div>
+									</div>
+								  </form>
+								<!--  <span>-</span><input type="text"><span>+</span> -->
 							</div>
 							<div class="to_buy_up_right">
 								价格 : <span>￥680</span>

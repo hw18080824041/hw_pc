@@ -29,8 +29,18 @@
 <!-- content 商品列表 -->
 
 <div class="content1">
-	<div class="con1_wrap">	</div>
+	<div class="con1_wrap">
+		<!-- 使用artTemplate -->
+		<script type="text/html" id="con1_prod_temp">
+			{{ each products prod}}
+			
+			{{/each}}
+		</script>
+			</div>
+
 </div>
+
+
 
 <!-- content2 热卖产品 -->
 <div class="content2">

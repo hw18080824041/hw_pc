@@ -96,7 +96,6 @@ $(function () {
 
 	$.getJSON("/mock/remai.json", function (data) {
 		//使用artTemplate渲染
-
 		let html = template("prod_temp", { products: data.res_body.products })
 		//console.log(html);
 		$(".con2_bottom").prepend(html);

@@ -59,33 +59,27 @@
 .main .main_right .introduce .to_buy .to_buy_up {
   width: 500px;
   height: 60px;
-  border: 1px solid #f00;
-  line-height: 60px;
-}
-
-.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_left {
-  width: 350px;
-  height: 60px;
-  float: left;
-  border: 1px solid #000;
-}
-
-.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_left input {
-  width: 80px;
-  height: 25px;
   text-align: center;
 }
 
-.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_left span {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #ccc;
+.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_left {
+  float: left;
+}
+
+.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_left .form-group {
+  margin-top: 12px;
+}
+
+.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_left .form-control {
+  width: 80px;
+  text-align: center;
 }
 
 .main .main_right .introduce .to_buy .to_buy_up .to_buy_up_right {
-  border: 1px solid #000;
+  width: 100px;
+  height: 60px;
   float: right;
+  line-height: 60px;
 }
 
 .main .main_right .introduce .to_buy .to_buy_down a {
@@ -96,6 +90,8 @@
   border: 1px solid #7c0d02;
   text-align: center;
   margin-top: 12px;
+  margin-right: 20px;
+  border-radius: 5px;
   line-height: 40px;
   color: #7c0d02;
 }
@@ -137,4 +133,13 @@
   width: 860px;
   height: 200px;
   float: left;
+}
+
+.main .main_right .about p {
+  width: 1000px;
+  height: 50px;
+  line-height: 50px;
+  color: #670205;
+  font-size: 16px;
+  border-bottom: 5px solid #670205;
 }

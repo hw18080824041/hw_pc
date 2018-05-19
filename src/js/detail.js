@@ -6,5 +6,5 @@ $(function(){
     /* 加载复用尾部尾部资源 */
     $(".footerbox").load("/html/include/footer.html");
 
-    console.log("a");
+   // console.log("a");
 });
