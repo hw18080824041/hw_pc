@@ -75,7 +75,7 @@ $(function () {
 	$.getJSON("mock/tshirts.json", function (data) {
 		let html = "";
 		data.res_body.products.forEach(function (prod) {
-			html += `<li><a href="#"><img src="${prod.img}" class="img-responsive" alt=""/></a>
+			html += `<li><a href="/html/detail.html"><img src="${prod.img}" class="img-responsive" alt=""/></a>
 			<span class="price">${prod.price.toFixed(2)}</span>
 			<p class="title">${prod.title}</p>
 			<p class="add_cart"><a href="javascript:void(0)" >${prod.addcart}</a></p>

@@ -1,0 +1,137 @@
+.main{
+    width: 1000px;
+   // height: 500px;
+    min-height: 500px;
+  //  border: 1px solid #000;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    .main_left{
+        width: 138px;
+        height:100px;
+        background: #ccc;
+        float: left;
+    }
+    .main_right{
+       // border: 1px solid yellow;
+        width: 860px;
+        //height: 500px;
+        float: left;
+        .m_pic{
+            float: left;
+        }
+        img{
+            width: 337px;
+            height: 337px;
+        }
+        .introduce{
+            width: 500px;
+            height: 450px;
+            float: left;
+            margin-left: 20px;
+            padding-top: 20px;
+            p span{
+                font-weight: 700;
+            }
+            p{
+                margin:15px 0;
+                font-size: 14px;
+            }
+            .rongliang{
+                height: 30px;
+                color: #670205;
+                border-bottom: 1px solid #ccc;
+            }
+            .to_buy{
+                width: 500px;
+                height: 120px;
+                //border: 1px solid #000;
+                .to_buy_up{
+                    width: 500px;
+                    height: 60px;
+                    border: 1px solid #f00;
+                    line-height: 60px;
+                    .to_buy_up_left{
+                        width: 350px;
+                        height: 60px;
+                        float: left;
+                        border: 1px solid #000;
+                        
+                        input{
+                            width: 80px;
+                            height: 25px;
+                            text-align: center;
+                        }
+                        span{
+                            display:inline-block;
+                            width: 25px;
+                            height: 25px;
+                            border: 1px solid #ccc;
+                          //  margin-top: 20px;
+                            
+                        }
+                    }
+                    .to_buy_up_right{
+                       // width: 100px;
+                       border: 1px solid #000;
+                        float: right;
+                    }
+                }
+                .to_buy_down{
+                   // line-height: 60px;
+                    a{
+                        display: inline-block;
+                        width: 150px;
+                        height: 40px;
+                        font-size: 15px;
+                        border: 1px solid #7c0d02;
+                        text-align: center;
+                        margin-top: 12px;
+                        line-height: 40px;
+                        color: #7c0d02;
+                        
+                    }
+                    .pay{
+                        background: #7c0d02;
+                        color:white;
+                    }
+                }
+
+            }
+            
+        }
+        .safeguard{
+            width: 860px;
+            height: 50px;
+            background:#eee;
+            line-height: 50px;
+            float: left;
+            border-bottom:1px solid #670205;
+            span{
+                color:#851d13;
+                font-size: 14px;
+                text-align: center;
+                display: inline-block;
+            }
+            .sa1{
+                background: url(/images/icon_official.png) no-repeat 78px center;
+            }
+            .sa2{
+                background: url(/images/icon_free.png) no-repeat 86px center;
+            }
+            .sa3{
+                background: url(/images/icon_security.png) no-repeat 92px center;
+            }
+            
+        }
+        .about{
+            width: 860px;
+            height: 200px;
+            float: left;
+           // border: 1px solid #000;
+
+        }
+    }
+    
+}
