@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#shooping-step{
+    width: 1000px;
+    height: 50px;
+    margin: 50px auto;
+
+    ul{
+        width: 600px;
+        height: 50px;
+        li,span{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            
+        }
+        li{
+            width: 110px;
+            text-align: center;
+            font-size: 15px;
+            background: #a7a9ac;
+            color: white;
+        }
+        
+        li:nth-of-type(2){
+
+            background: #ba2620;
+        }
+        span{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background: url(../images/home_105.jpg ) no-repeat center center ;
+        }
+    }
+    
+}
+// 填写核对
+.write{
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+   // border: 1px solid #000;
+    line-height: 50px;
+    border-top: 1px solid #7c0d02;
+    border-bottom: 4px solid #7c0d02;
+    padding-left: 10px;
+    color: #7c0d02;
+}
+// 收货人信息
+.warm_data{
+    width: 1000px;
+    min-height: 520px;
+    margin: 0 auto;
+ // border: 1px solid #000;
+    margin-top: 10px;
+    .data{
+        width: 980px;
+        height: 490px;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+        padding: 0 10px;
+        .p1{
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #7c0d02;
+            color: #670205;
+
+        }
+        .add_addr{
+            height: 80px;
+          //  border: 1px solid #000;
+            border-top: 4px solid #ddc4c5;
+            h4{
+                width: 140px;
+                height: 40px;
+                background: #7c0d02;
+                color: #fff;
+                font-weight: normal;
+                text-align: center;
+                line-height: 40px;
+                margin-left: 20px;
+                margin-top: 20px;
+                
+            }
+        }
+        table{
+            width: 958px;
+            height: 300px;
+           // border: 1px solid #000;
+        
+           tbody th{
+                height: 20px;
+                width: 150px;
+               // border: 1px solid #000;
+                text-align:right;
+                padding-right: 10px;
+                font-weight: 500;
+                font-size: 17px;
+            }
+            td input{
+                width: 500px;
+                height: 30px;
+                border: 1px solid #ccc;
+                padding-left: 10px;
+            }
+            .name td input{
+                width: 150px;
+            }
+            .addr td input{
+                width: 70px;
+            }
+            .detal_addr td input{
+                width: 470px;
+            }
+            .pid td input{
+                width: 100px;
+            }
+            .phone td input{
+                width: 200px;
+            }
+            .fixed_phone td input{
+                width: 200px;
+            }
+            .time td input{
+                width: 120px;
+            }
+            span{
+                color: #7c0d02;
+            }
+        }
+        .confirm_addr{
+            height: 80px;
+              h4{
+                  width: 140px;
+                  height: 40px;
+                  background: #7c0d02;
+                  color: #fff;
+                  font-weight: normal;
+                  text-align: center;
+                  line-height: 40px;
+                  margin-left: 20px;
+                  margin-top: 20px;
+                  
+              }
+        }
+    }
+    .send,.pay{
+        width: 980px;
+        height: 100px;
+        margin: 20px auto;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        p{
+          height: 60px;
+          border-bottom: 1px solid #7c0d02;
+          line-height: 60px;  
+          color: #670205;
+        }
+    }
+    
+}

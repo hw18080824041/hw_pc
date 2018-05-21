@@ -45,6 +45,11 @@
   text-align: center;
   font-size: 15px;
   background: #a7a9ac;
+  color: white;
+}
+
+#shooping-step ul li:nth-of-type(1) {
+  background: #ba2620;
 }
 
 #shooping-step ul span {
