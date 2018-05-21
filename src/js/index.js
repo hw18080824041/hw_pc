@@ -72,7 +72,7 @@ $(function () {
 });
 //异步加载产品
 $(function () {
-	$.getJSON("mock/tshirts.json", function (data) {
+	/* $.getJSON("mock/tshirts.json", function (data) {
 		let html = "";
 		data.res_body.products.forEach(function (prod) {
 			html += `<li><a href="/html/detail.html"><img src="${prod.img}" class="img-responsive" alt=""/></a>
@@ -83,16 +83,16 @@ $(function () {
 		</li>`;
 		});
 		$(".con1_wrap").prepend(html);
-	});
+	}); */
 
-	/*$.getJSON("/mock/tshirts.json",function(data){
+	$.getJSON("/mock/tshirts.json",function(data){
 	//使用artTemplate 渲染
-		let html = template("prod_temp",{products :data.res_body.products})
+		let html = template("con1_prod_temp",{products :data.res_body.products})
 		// console.log(html);
 		//显示
 		$(".con1_wrap").prepend(html);
 
-	})*/
+	})
 
 	$.getJSON("/mock/remai.json", function (data) {
 		//使用artTemplate渲染
@@ -108,18 +108,26 @@ $(function () {
 /* ******************************** */
 /*为加入购物车绑定点击事件 用事件委派""  */
 $(function () {
-	$(".con1_wrap").on("click", ".add_cart", function (e) {
+	$(".con1_wrap,.con2_wrap").on("click", ".add_cart", function (e) {
 		e.preventDefault();
 		//获取当前点击加入购物车所在的大盒子
 		var box = $(this).parent();
+		  
+		var sum =$("#top_cart span").text();
+		sum++;
+		$("#top_cart span").text(sum);
+		
 		//将当前信息保存到对象中
 		var currentProduct = {
 			id: box.children(".id").text(),
 			price: box.children(".price").text(),
 			title: box.children(".title").text(),
 			img: box.children().children(".img-responsive").attr("src"),
-			amount: 1
+			amount: 1,
+			sum :$("#top_cart span").text()
 		};
+		
+		//console.log(box);
 
 		//配置cookie 使用 自动json转换
 
@@ -171,3 +179,5 @@ $(function () {
 	};
 
 });
+
+//

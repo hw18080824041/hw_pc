@@ -46,7 +46,7 @@
 			<form class="bt_right">
 				<h3>加入会员</h3>
 				<p class="p1">成为资生堂花庄会员，体验各种为您量身定制的奢享礼遇</p>
-				<input type="text" placeholder="电子邮箱" name=""><br>
+				<input type="text" placeholder="电子邮箱" name="" class="b_email"><br>
 				<input type="password" placeholder="密码" name="">
 				<p class="p2"><i>密码必须是6位以上字母和数字组成，可以包含符号。</i></p>
 				<input type="password" placeholder="密码确认" name=""><br>
@@ -82,8 +82,8 @@
 				</div>
 				<input type="radio" name="" class="sex read"><span> 我已阅读并接受了购物条款</span>
 				<p class="p6">
-					<a href="#">身份绑定</a>
-					<a href="#">注册</a>
+					<a href="javascript:void(0)" id="identity ">身份绑定</a>
+					<a href="javascript:void(0)" id="register">注册</a>
 				</p>
 			</form>
 		</div>
@@ -95,7 +95,9 @@
 
 
 	<script  src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="/lib/jquery-plugins/jquery.cookie.js"></script>
 	<script  src="/js/login.js"></script>
+
 	<!-- <script type="text/javascript" src="/lib/art-template/template-web.js"></script> -->
 </body>
 </html>

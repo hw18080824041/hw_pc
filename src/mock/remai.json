@@ -3,11 +3,11 @@
 	"res_error":"",
 	"res_body":{
 		"products":[
-			{"pid":2, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"},
-			{"pid":2, "title":"百优丰盈提拉紧致眼霜","capacity":"15ml", "price":590,"cart":"加入购物车", "img":"/images/ad0397e4256f738a97d59d9dab4a735440050eb6.jpg"},
-			{"pid":2, "title":"资生堂男士滋润乳","capacity":"100ml", "price":280,"cart":"加入购物车", "img":"/images/1987075a9bf0b08a3516261d04b2d63d080f7f3d.jpg"},
-			{"pid":2, "title":"滋身堂新漾美肌金华润肤霜","capacity":"50ml", "price":420,"cart":"加入购物车", "img":"/images/0d1df8bdde5e57f58a3fd918ef2c1925207ad878.jpg"},
-			{"pid":2, "title":"悦薇珀翠紧颜亮肤乳（滋润型）","capacity":"100ml", "price":760,"cart":"加入购物车", "img":"/images/asdf.png"}
+			{"pid":5, "title":"红颜肌活精华露","capacity":"50ml", "price":860,"cart":"加入购物车", "img":"/images/e490172b9f2c72d26f845ced646fa1d596eba2f1.jpg"},
+			{"pid":6, "title":"百优丰盈提拉紧致眼霜","capacity":"15ml", "price":590,"cart":"加入购物车", "img":"/images/ad0397e4256f738a97d59d9dab4a735440050eb6.jpg"},
+			{"pid":7, "title":"资生堂男士滋润乳","capacity":"100ml", "price":280,"cart":"加入购物车", "img":"/images/1987075a9bf0b08a3516261d04b2d63d080f7f3d.jpg"},
+			{"pid":8, "title":"滋身堂新漾美肌金华润肤霜","capacity":"50ml", "price":420,"cart":"加入购物车", "img":"/images/0d1df8bdde5e57f58a3fd918ef2c1925207ad878.jpg"},
+			{"pid":9, "title":"悦薇珀翠紧颜亮肤乳（滋润型）","capacity":"100ml", "price":760,"cart":"加入购物车", "img":"/images/asdf.png"}
 
 		]
 	}

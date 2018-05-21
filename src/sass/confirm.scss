@@ -147,7 +147,7 @@
               }
         }
     }
-    .send,.pay{
+    .send,.pay,.invoice{
         width: 980px;
         height: 100px;
         margin: 20px auto;
@@ -158,6 +158,13 @@
           border-bottom: 1px solid #7c0d02;
           line-height: 60px;  
           color: #670205;
+          
+        }
+    }
+    .invoice{
+        height: 150px;
+        input{
+            margin:35px 20px;
         }
     }
     

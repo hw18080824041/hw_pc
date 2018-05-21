@@ -1,106 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>项目的首页</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="../lib/ft-carousel.css">
 </head>
+
 <body>
 	<!-- 头部复用 -->
-		<div class="headerbox">		</div>
-<!-- banner 1000 485 -->
-<div class="banner">
-	<div class="bannerBox" id="bannerBox">
-		<div class="example">
-			<div class="ft-carousel" id="carousel_1">
-				<ul class="carousel-inner">
-					<li class="carousel-item"><img src="/images/banner1.jpg" /></li>
-					<li class="carousel-item"><img src="/images/banner2.jpg" /></li>
-					<li class="carousel-item"><img src="/images/banner3.jpg" /></li>
-					<li class="carousel-item"><img src="/images/banner1.jpg" /></li>
-					<li class="carousel-item"><img src="/images/banner2.jpg" /></li>
-					<li class="carousel-item"><img src="/images/banner3.jpg" /></li>
-				</ul>
+	<div class="headerbox"> </div>
+	<!-- banner 1000 485 -->
+	<div class="banner">
+		<div class="bannerBox" id="bannerBox">
+			<div class="example">
+				<div class="ft-carousel" id="carousel_1">
+					<ul class="carousel-inner">
+						<li class="carousel-item">
+							<img src="/images/banner1.jpg" />
+						</li>
+						<li class="carousel-item">
+							<img src="/images/banner2.jpg" />
+						</li>
+						<li class="carousel-item">
+							<img src="/images/banner3.jpg" />
+						</li>
+						<li class="carousel-item">
+							<img src="/images/banner1.jpg" />
+						</li>
+						<li class="carousel-item">
+							<img src="/images/banner2.jpg" />
+						</li>
+						<li class="carousel-item">
+							<img src="/images/banner3.jpg" />
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- content 商品列表 -->
+	<!-- content 商品列表 -->
 
-<div class="content1">
-	<div class="con1_wrap">
-		<!-- 使用artTemplate -->
-		<script type="text/html" id="con1_prod_temp">
+	<div class="content1">
+		<div class="con1_wrap">
+			<!-- 使用artTemplate -->
+			<script type="text/html" id="con1_prod_temp">
 			{{ each products prod}}
-			
+			<li>
+				<a href="/html/detail.html"><img src="{{prod.img}}" class="img-responsive" alt=""></a>
+				<span class="price">{{prod.price}}</span>
+				<p class="title">{{prod.title}}</p>
+				<p class="add_cart"><a href="javascript:void(0)">{{prod.addcart}}</a></p>
+				<p class="id" style="display:none;">{{prod.pid}}</p>
+			</li>
 			{{/each}}
 		</script>
-			</div>
-
-</div>
-
-
-
-<!-- content2 热卖产品 -->
-<div class="content2">
-	<div class="con2_wrap">
-		<div class="con2_top">
-			<p>热卖产品</p>
 		</div>
-	<div class="con2_bottom">
-		<!-- artTemplate -->
-		<script type="text/html" id="prod_temp">
+	</div>
+	<!-- content2 热卖产品 -->
+	<div class="content2">
+		<div class="con2_wrap">
+			<div class="con2_top">
+				<p>热卖产品</p>
+			</div>
+			<div class="con2_bottom">
+				<!-- artTemplate -->
+				<script type="text/html" id="prod_temp">
 				{{ each products prod}}
 			<dl>
-					<dt><a href="#"><img src="{{prod.img}}"></a></dt>
 				<dd>
+					<a href="/html/detail.html"><img src="{{prod.img}}" class="img-responsive"></a>
 					<p class="title"><a href="#">{{prod.title}}</a></p>
 					<p>{{prod.capacity}}</p>
-					<p>￥{{prod.price}}</p>
+					<p class="price">{{prod.price}}</p>
 					<a href="#" class="add_cart">{{prod.cart}}</a>
 					<span class="id" style="display: none;">{{prod.pid}}</span>
 				</dd>
 			</dl>
 				{{/each}}
-		</script>
+		</script> 
+			</div>
+		</div>
+
 	</div>
+	<!-- 最新资讯 -->
+	<div class="content3">
+		<div class="con3_top">
+			<p>最新资讯</p>
+		</div>
+		<div class="con3_bottom">
+			<a href="#">
+				<img src="images/banner1.jpg">
+			</a>
+		</div>
 	</div>
-	
-</div>
-<!-- 最新资讯 -->
-<div class="content3">
-	<div class="con3_top">
-		<p>最新资讯</p>
+	<!-- 尾部footer -->
+	<div class="footerbox"></div>
+	<!-- footer完 -->
+	<!-- 右侧返回顶部 -->
+	<div class="backTop">
+		<ul>
+			<li class="call">
+				<a href="#">电话咨询</a>
+			</li>
+			<li>
+				<a href="#">关注我们</a>
+			</li>
+			<li class="online">
+				<a href="#">在线客服</a>
+			</li>
+			<li class="top">
+				<a href="#"></a>
+			</li>
+		</ul>
 	</div>
-	<div class="con3_bottom">
-		<a href="#">
-			<img src="images/banner1.jpg">
-		</a>
-	</div>
-</div>
-<!-- 尾部footer -->
-<div class="footerbox"></div>
-<!-- footer完 -->
-<!-- 右侧返回顶部 -->
-<div class="backTop">
-	<ul>
-		<li class="call"><a href="#" >电话咨询</a></li>
-		<li><a href="#">关注我们</a></li>
-		<li class="online"><a href="#" >在线客服</a></li>
-		<li class="top"><a href="#"></a></li>
-	</ul>
-</div>
-<!-- 结束 -->
-<!-- <script src="lib/requirejs/require.js" data-main="js/index"></script> -->
-<script  src="lib/jquery/jquery-1.12.4.min.js"></script>
-<script src="lib/jquery-plugins/jquery.cookie.js"></script>
-<script src="lib/jquery-plugins/jquery.fly.min.js"></script>
-<script src="lib/ft-carousel.min.js"></script>
-<script  src="js/index.js"></script>
-<script type="text/javascript" src="lib/art-template/template-web.js"></script>
-<script type="text/javascript">
-	$("#carousel_1").FtCarousel(2,true,500,true,true);
-</script>
+	<!-- 结束 -->
+	<!-- <script src="lib/requirejs/require.js" data-main="js/index"></script> -->
+	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="lib/jquery-plugins/jquery.cookie.js"></script>
+	<script src="lib/jquery-plugins/jquery.fly.min.js"></script>
+	<script src="lib/ft-carousel.min.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" src="lib/art-template/template-web.js"></script>
+	<script type="text/javascript">
+		$("#carousel_1").FtCarousel(2, true, 500, true, true);
+	</script>
 </body>
+
 </html>

@@ -158,7 +158,7 @@
   margin-top: 20px;
 }
 
-.warm_data .send, .warm_data .pay {
+.warm_data .send, .warm_data .pay, .warm_data .invoice {
   width: 980px;
   height: 100px;
   margin: 20px auto;
@@ -166,9 +166,17 @@
   border: 1px solid #ccc;
 }
 
-.warm_data .send p, .warm_data .pay p {
+.warm_data .send p, .warm_data .pay p, .warm_data .invoice p {
   height: 60px;
   border-bottom: 1px solid #7c0d02;
   line-height: 60px;
   color: #670205;
+}
+
+.warm_data .invoice {
+  height: 150px;
+}
+
+.warm_data .invoice input {
+  margin: 35px 20px;
 }

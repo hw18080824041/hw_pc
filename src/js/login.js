@@ -45,4 +45,26 @@ $(function(){
 	});
 	/*加载尾部*/
 	$(".footerbox").load("/html/include/footer.html");
+
+
+	
+	
 });
+
+
+//注册会员用cookie保存
+
+$(function(){
+	$("#register,#identity").on("click",function(){
+		// 将注册信息保存在对象中
+		var logOnMessage = {
+			email: $(".b_email").text()
+			
+		};
+		console.log(logOnMessage.email)
+		//配置cookie 使用自动转换
+		$.cookie.json = true;
+
+	});
+});
+

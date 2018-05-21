@@ -50,6 +50,7 @@ $(function () {
 
 
 
+
 	/*从cookie中读取数据 渲染*/
 	$(function () {
 		//使用jquery.cookie.js 插件
@@ -89,6 +90,8 @@ $(function () {
 			row.remove();
 			//计算合计
 			calcTotalPrice();
+			//计算购物车的总数量
+			cart_total();
 
 
 
@@ -119,6 +122,8 @@ $(function () {
 			row.find(".sub").text((prod.price * prod.amount).toFixed(2));
 			//计算合计
 			calcTotalPrice();
+			//计算购物车的总数量
+			cart_total();
 		});
 		//修改 input内数量 
 		$("#tbody").on("blur", ".amount", function () {
@@ -145,6 +150,8 @@ $(function () {
 			row.find(".sub").text((prod.price * prod.amount).toFixed(2));
 			//计算合计
 			calcTotalPrice();
+			//计算购物车的总数量
+			cart_total();
 		});
 		/* ************ */
 		/* 全选 部分选中  */
@@ -156,6 +163,8 @@ $(function () {
 			$(".ck_prod").prop("checked", status);
 			//计算合计
 			calcTotalPrice();
+			//计算购物车的总数量
+			cart_total();
 
 		});
 		//判断已勾选框的商品行前复选框个数与_products数组长度是否一致，确定是否全选
@@ -164,7 +173,8 @@ $(function () {
 			$(".ck_all").prop("checked", b);
 			//计算合计
 			calcTotalPrice();
-
+			//计算购物车的总数量
+			cart_total();
 		});
 
 
@@ -177,20 +187,32 @@ $(function () {
 			}
 			return -1;
 		};
+
+		//计算购物车的总数量
+		function cart_total() {
+			var cart_sum = 0;
+			$("tbody tr").each(function () {
+				cart_sum += Number($(this).find(".amount").val());
+				console.log(cart_sum);
+			});
+			$("#top_cart span").text(cart_sum);
+		};
+		
+
+
 		//计算合计
 		function calcTotalPrice() {
 			var total = 0;
 			//遍历jQuery对象中的每个DOM元素
 			$(".ck_prod:checked").each(function (index, element) {
-				total += Number($(this).parents("tr").find(".sub").text())
+				total += Number($(this).parents("tr").find(".sub").text());
 			});
 			// 显示合计金额
 			$(".total_pay").text(total.toFixed(2));
-
-			//	console.log(total);
 		};
 		calcTotalPrice();
 	});
+
 
 });
 
