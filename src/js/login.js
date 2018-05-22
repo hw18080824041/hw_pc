@@ -55,16 +55,25 @@ $(function(){
 //注册会员用cookie保存
 
 $(function(){
-	$("#register,#identity").on("click",function(){
+	$("#register").on("click",function(){
 		// 将注册信息保存在对象中
 		var logOnMessage = {
-			email: $(".b_email").text()
-			
+			email: $(".b_email").val(),
+			password:$(".b_password").val(),
+			con_password : $(".confirm_password").val(),
+			phone:$(".phone").val(),
+			username:$(".username").val()
 		};
-		console.log(logOnMessage.email)
 		//配置cookie 使用自动转换
 		$.cookie.json = true;
+		// 先读取已有的注册信息 如果没有 就创建一个空【】
 
+		var information = $.cookie("information") ||[] ;
+		//判断注册信息里面是否被注册过
+		information.push(logOnMessage);
+		//使用cookie保存注册信息
+		$.cookie("information",information,{expires:7,path:"/"});
+		console.log(information);
 	});
 });
 

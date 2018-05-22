@@ -22,53 +22,7 @@ $(function () {
 		$(".headerbox").html(data);
 	})*/
 	//方法三
-	$(".headerbox").load("/html/include/header.html", function () {
-		//加载完毕后 绑定搜索建议提示事件
-		$(".search :text").on("keyup", function () {
-			//输入时让suggest显示
-			$(".suggest").css("display","block")
-			//console.log("a");
-			
-			$(".suggest").css("display","block");
-			let val = $(this).val(),// 当前文本框的值
-				url = `https://suggest.taobao.com/sug?callback=?&q=${val}&code=utf-8`
-			$.getJSON(url, function (data) {
-				// console.log(data); 
-				let html = "";
-				data.result.forEach(function (curr) {
-					html += `<div>${curr[0]}</div>`;
-				})
-				// $(".search").append(html);
-				$(".suggest").html(html);
 
-			});
-		});
-		//收缩失去焦点隐藏盒子
-
-		$(".search :text").on("blur",function(){
-			$(".suggest").css("display","none");
-		});
-		// 鼠标移入显示二级菜单
-		$("ul.megamenu>li:lt(3):gt(0)").hover(function () {
-			//mouseenter
-			$("#hf_list").show();
-
-		}, function () {
-			//mouseleave
-			$("#hf_list").hide();
-
-		});
-		$("#hf_list").hover(function () {
-			$(this).show();
-
-		}, function () {
-			$(this).hide();
-
-		});
-	});
-	//$("#bannerBox").FtCarousel(0,true,1000,true,true);
-	/*加载尾部*/
-	$(".footerbox").load("/html/include/footer.html");
 });
 //异步加载产品
 $(function () {
@@ -177,6 +131,25 @@ $(function () {
 		}
 		return -1;
 	};
+//
+	$(".con1_wrap").on("click","li",function(){
+		  /* 使用areTemplate渲染 */
+		  var that = this
+		  $.getJSON("/mock/detail.json",function(data){
+			console.log(data)
+			var prod = data.res_body.products;
+			prod.forEach(function(cur){
+				if($(that).children("a").children("img").src == cur.img){
+					let html = template("detail_temp",{products:cur});
+					//显示
+					$(".main").prepend(html);
+				}
+			})
+			
+			
+			
+		});
+	})
 
 });
 

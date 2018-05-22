@@ -37,17 +37,27 @@ a{
 		font-size: 12px;
 		color: white;
 		.top_right{
-			width: 200px;
+			width: 420px;
 			height: 35px;
 			float: right;
 			line-height: 35px;
-			background: url(../images/home_05.jpg) no-repeat 95px 1px;
 			a{
 				padding: 0 20px;
+				color:yellow;
+				float: right;
 			}
-			.top_cart{
-				width: 20px;
+			a:hover{
+				color: #f00;
+			}
+			 #top_cart{
+				display: inline-block;
+				//width: 50px;
 				height: 35px;
+				padding-left: 50px;
+				//border: 1px solid #fff;
+				background: url(../images/home_05.jpg) no-repeat 25px 1px;
+				color: #fff;
+				//float: right;
 			}
 		}
 		.top_left{

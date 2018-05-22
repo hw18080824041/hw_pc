@@ -193,7 +193,7 @@ $(function () {
 			var cart_sum = 0;
 			$("tbody tr").each(function () {
 				cart_sum += Number($(this).find(".amount").val());
-				console.log(cart_sum);
+				//console.log(cart_sum);
 			});
 			$("#top_cart span").text(cart_sum);
 		};

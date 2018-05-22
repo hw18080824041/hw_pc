@@ -76,10 +76,15 @@
 }
 
 .main .main_right .introduce .to_buy .to_buy_up .to_buy_up_right {
-  width: 100px;
+  width: 150px;
   height: 60px;
   float: right;
   line-height: 60px;
+}
+
+.main .main_right .introduce .to_buy .to_buy_up .to_buy_up_right span {
+  font-size: 30px;
+  color: #670205;
 }
 
 .main .main_right .introduce .to_buy .to_buy_down a {

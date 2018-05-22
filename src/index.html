@@ -48,7 +48,7 @@
 			<script type="text/html" id="con1_prod_temp">
 			{{ each products prod}}
 			<li>
-				<a href="/html/detail.html"><img src="{{prod.img}}" class="img-responsive" alt=""></a>
+				<a href="{{prod.href}}"><img src="{{prod.img}}" class="img-responsive" alt=""></a>
 				<span class="price">{{prod.price}}</span>
 				<p class="title">{{prod.title}}</p>
 				<p class="add_cart"><a href="javascript:void(0)">{{prod.addcart}}</a></p>
@@ -70,7 +70,7 @@
 				{{ each products prod}}
 			<dl>
 				<dd>
-					<a href="/html/detail.html"><img src="{{prod.img}}" class="img-responsive"></a>
+					<a href="{{prod.href}}"><img src="{{prod.img}}" class="img-responsive"></a>
 					<p class="title"><a href="#">{{prod.title}}</a></p>
 					<p>{{prod.capacity}}</p>
 					<p class="price">{{prod.price}}</p>
@@ -122,6 +122,7 @@
 	<script src="lib/jquery-plugins/jquery.fly.min.js"></script>
 	<script src="lib/ft-carousel.min.js"></script>
 	<script src="js/index.js"></script>
+	<script src="/js/loadHeaderFooter.js"></script>
 	<script type="text/javascript" src="lib/art-template/template-web.js"></script>
 	<script type="text/javascript">
 		$("#carousel_1").FtCarousel(2, true, 500, true, true);

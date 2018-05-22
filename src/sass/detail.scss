@@ -64,11 +64,15 @@
                     
                    }
                     .to_buy_up_right{
-                        width: 100px;
+                        width: 150px;
                         height: 60px;
                        // background: #ccc;
                         float: right;
                         line-height: 60px;
+                        span{
+                            font-size: 30px;
+                            color: #670205;
+                        }
                     }
                 }
                 .to_buy_down{

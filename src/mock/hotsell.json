@@ -10,3 +10,64 @@
 		"addcart":"加入购物车"
 	}
 }
+
+
+
+<!-- 左边导航 -->
+		<div class="main_left"></div>
+		<!-- 右 -->
+		<div class="main_right">
+			<!-- 商品图片 -->
+			<div class="m_pic">
+				<img src="/images/sadf.jpg" alt="">
+			</div>
+			<div class="introduce">
+				<h4>资生堂悦薇珀翡塑颜抗皱霜 </h4>
+				<p class="rongliang">15mL</p>
+				<p>
+					<span>详情 : </span> 提拉、紧致、抚纹、白皙，塑造多维青春容颜，从此无惧时光印迹。</p>
+				<p>
+					<span>功效 : </span>资生堂活性抗皱焕亮配方Retino-VP8，同时改善多种老化困扰，寻找青春真相。 卓效抗皱成分 纯视黄醇: 纯度与活性，助力肌肤更新，卓效淡化内部皱纹。 美白精华 4MSK: 稳定导入，与其它有效成分配合有效扫除暗沉、淡化色斑、抑制黑色素生成，亮白青春。
+					复合紧颜精萃 VP8: 延缓蛋白质老化。肌肤回复紧致丰盈的弹润质感。
+				</p>
+				<p>
+					<span>使用方法：</span>每作为晚上护肤步骤最后一步使用，取一粒小珍珠份量(约0.2g）均匀涂抹在眼部周围。眼部在意的部位进行重点的涂抹以及配合按摩手法。</p>
+				<div class="to_buy">
+					<div class="cont to_buy_up">
+						<div class="to_buy_up_left">
+							<form class="form-inline">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">+</div>
+										<input type="text" class="form-control" id="exampleInputAmount" value="1">
+										<div class="input-group-addon">-</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="to_buy_up_right">
+							价格 :
+							<span>￥680</span>
+						</div>
+
+					</div>
+					<div class="to_buy_down">
+						<a href="#">加入购物车</a>
+						<a href="#" class="pay">立即够买</a>
+
+					</div>
+				</div>
+
+			</div>
+			<!-- 保障 -->
+			<div class="safeguard">
+				<span class="col-md-4 sa1">官方正品保证</span>
+				<span class="col-md-4 sa2">全场免运费</span>
+				<span class="col-md-4 sa3">支付保障</span>
+
+			</div>
+			<!-- 相关产品 -->
+			<div class="about">
+				<p>相关商品推荐</p>
+			</div>
+		</div>
