@@ -103,7 +103,9 @@ a{
 			a:hover{
 				color: red;
 			}
+
 		}
+		
 	}
 	.nav_right{
 		float: right;
@@ -151,26 +153,36 @@ a{
 		
 	}
 	}
-
+	.wrap{
+		width: 1200px;
+		height: 500px;
+		background-color: #fff;
+		
+		//border: 1px solid black;
+		box-shadow:-3px -3px 10px #ccc;
+	}
 	.hf_list{
 		width: 600px;
 		height: 400px;
 		margin: 0 auto;
 		position: absolute;
-		background-color: #E9B3F9;
-		opacity: 0.8;
+		background-color: #fff;
+		opacity: 0.9;
 		top: 44px;
 		left:0px;
 		/* border: 1px solid red; */
 		display: none;
+	
 		.mianshuang:hover .m_list1_1{
-				display: block;
-			}
-		.m_list1 , .m_list2{
+			display: block;
+		}
+		.xilie,.m_list1 , .m_list2{
 			width: 300px;
 			height: 400px;
 			float: left;
 			h2{
+				height: 40px;
+				border-bottom: 1px solid #ccc;
 				font-weight: normal;
 				margin: 10px;
 			}
@@ -180,6 +192,15 @@ a{
 				padding-left: 10px;
 			}
 		}
+		.xilie{
+			width: 500px;
+			height: 400px;
+			img{
+				float: left;
+				margin:10px 10px;
+			}
+		}
+
 
 		.m_list1 .m_list1_1{
 			width: 80px;

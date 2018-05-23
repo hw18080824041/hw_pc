@@ -56,16 +56,16 @@ $(function () {
 														`);
 		}
 		//计算购物车的总数量
-		let sum = $.cookie("products");
+		let sum = $.cookie("products")||[];
 			
 		
-			var cart_sum = 0;
-
-			sum.forEach(function (cur) {
-				cart_sum = $(".amount").val();
-			});
-			console.log(sum);
-			$("#top_cart span").text(cart_sum);
+		var cart_sum = 0;
+		
+		sum.forEach(function (cur) {
+			cart_sum += Number(cur.amount);
+		});
+		//console.log(cart_sum);
+		$("#top_cart span").text(cart_sum);
 		
 
 

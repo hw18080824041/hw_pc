@@ -78,7 +78,7 @@ $(function () {
 			title: box.children(".title").text(),
 			img: box.children().children(".img-responsive").attr("src"),
 			amount: 1,
-			sum :$("#top_cart span").text()
+			//sum :$("#top_cart span").text()
 		};
 		
 		//console.log(box);

@@ -145,7 +145,7 @@ $(function () {
 			//将商品的数量属性值修改为当前输入值
 			prod.amount = inputAmount;
 			//然后保存在cookie中
-			$.cookie("[products", _products, { expires: 7, path: "/" });
+			$.cookie("products", _products, { expires: 7, path: "/" });
 			//显示小计
 			row.find(".sub").text((prod.price * prod.amount).toFixed(2));
 			//计算合计

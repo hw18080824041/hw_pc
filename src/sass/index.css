@@ -172,13 +172,20 @@ a {
   cursor: pointer;
 }
 
+.header_footer .wrap {
+  width: 1200px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: -3px -3px 10px #ccc;
+}
+
 .header_footer .hf_list {
   width: 600px;
   height: 400px;
   margin: 0 auto;
   position: absolute;
-  background-color: #E9B3F9;
-  opacity: 0.8;
+  background-color: #fff;
+  opacity: 0.9;
   top: 44px;
   left: 0px;
   /* border: 1px solid red; */
@@ -189,20 +196,32 @@ a {
   display: block;
 }
 
-.header_footer .hf_list .m_list1, .header_footer .hf_list .m_list2 {
+.header_footer .hf_list .xilie, .header_footer .hf_list .m_list1, .header_footer .hf_list .m_list2 {
   width: 300px;
   height: 400px;
   float: left;
 }
 
-.header_footer .hf_list .m_list1 h2, .header_footer .hf_list .m_list2 h2 {
+.header_footer .hf_list .xilie h2, .header_footer .hf_list .m_list1 h2, .header_footer .hf_list .m_list2 h2 {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
   font-weight: normal;
   margin: 10px;
 }
 
-.header_footer .hf_list .m_list1 li, .header_footer .hf_list .m_list2 li {
+.header_footer .hf_list .xilie li, .header_footer .hf_list .m_list1 li, .header_footer .hf_list .m_list2 li {
   margin: 18px 0;
   padding-left: 10px;
+}
+
+.header_footer .hf_list .xilie {
+  width: 500px;
+  height: 400px;
+}
+
+.header_footer .hf_list .xilie img {
+  float: left;
+  margin: 10px 10px;
 }
 
 .header_footer .hf_list .m_list1 .m_list1_1 {

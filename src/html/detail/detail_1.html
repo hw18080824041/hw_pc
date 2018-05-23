@@ -27,11 +27,12 @@
 		<!-- 右 -->
 		<div class="main_right">
 			<!-- 商品图片 -->
+			<p class="id" style="display:none;">{{prod.pid}}</p>
 			<div class="m_pic">
 				<img src="{{prod.img}}" alt="">
 			</div>
 			<div class="introduce">
-				<h4 class="name">{{prod.name}}</h4>
+				<h4 class="title name">{{prod.title}}</h4>
 				<p class="rongliang">{{prod.rongliang}}</p>
 				<p>
 					<span>详情 : </span>{{prod.xq}}</p>
@@ -60,8 +61,8 @@
 
 					</div>
 					<div class="to_buy_down">
-						<a href="#">加入购物车</a>
-						<a href="#" class="pay">立即够买</a>
+						<a href="javascript:void(0)" class="add_cart">加入购物车</a>
+						<a href="/html/confirm.html" class="pay">立即够买</a>
 
 					</div>
 				</div>
@@ -88,8 +89,12 @@
 	<!-- 尾部 -->
 	<div class="footerbox"></div>
 	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="/lib/jquery-plugins/jquery.cookie.js"></script>
+	<script src="/lib/jquery-plugins/jquery.fly.min.js"></script>
 	<script src="/js/detail_1.js"></script>
+	<script src="/js/details.js"></script>
 	<script src="/lib/art-template/template-web.js"></script>
+	<script src="/js/loadHeaderFooter.js"></script>
 </body>
 
 </html>
