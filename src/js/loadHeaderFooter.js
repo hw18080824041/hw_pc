@@ -19,14 +19,28 @@ $(function () {
 				})
 				// $(".search").append(html);
 				$(".suggest").html(html);
-
 			});
+			
+
 		});
+		//选择更改搜索框的值
+		$(".suggest").on("click",function(e){
+			var asd = e.target;
+			console.log(asd);
+			var value = $(asd).text();
+			console.log(value);
+			$(".nav_txt").val(value);
+			//选择后 隐藏盒子
+			$(".suggest").css("display", "none");
+		})
+
+
 		//收缩失去焦点隐藏盒子
 
-		$(".search :text").on("blur", function () {
-			$(".suggest").css("display", "none");
-		});
+		 $(".search :text").on("blur", function () {
+		 	$(".suggest").css("display", "none");
+		 });
+
 		// 鼠标移入显示二级菜单
 		$("ul.megamenu>li:lt(3):gt(0)").hover(function () {
 			//mouseenter
@@ -50,9 +64,8 @@ $(function () {
 		$.cookie.json = true;
 		let user = $.cookie("information");
 		if (user) {
-			$(".login_register").html(`<a href="#">退出</a>
+			$(".login_register").html(`<a href="/html/login.html">退出</a>
 				<a href="#">欢迎您 : ${user[0].email}</a>
-											
 														`);
 		}
 		//计算购物车的总数量

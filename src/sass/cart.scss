@@ -60,15 +60,24 @@
     margin: 50px auto;
     min-height: 50px;
     text-align: center;
+    thead .ck_all{
+        cursor:pointer;
+    }
     thead tr th{
         text-align: center;
     }
    #tbody td{
         height: 46px;
         line-height: 50px;
+        .ck_prod{
+            cursor:pointer;
+        }
    }
    #tbody .input-group{
        padding-top: 15px;
+       .minus,.add{
+           cursor: pointer;
+       }
        .amount{
            text-align: center  ;
        }
@@ -79,9 +88,14 @@
        font-weight: 700;
        
       // border: 1px solid #000;
-      .goon{
+      .goon,.topay{
           width: 60px;
           height: 30px;
+          a{
+              color: #ba2620;
+              font-size: 17px;
+              font-style: italic;
+          }
 
          // border: 1px solid #000;
       }

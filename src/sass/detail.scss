@@ -9,9 +9,20 @@
     overflow: hidden;
     .main_left{
         width: 138px;
-        height:100px;
-        background: #ccc;
+        min-height:100px;
+        padding-left: 20px;
+        // background: #ccc;
+      //  border: 1px solid red;
         float: left;
+        h4{
+            font-weight: normal;
+            font-size: 15px;
+            height: 30px;
+           // border: 1px solid #000;
+            line-height: 30px;
+            background: url(/images/arrow_left1.jpg) no-repeat right center;
+        }
+
     }
     .main_right{
        // border: 1px solid yellow;

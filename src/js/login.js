@@ -77,3 +77,10 @@ $(function(){
 	});
 });
 
+//登录
+$(function(){
+	//获取cookie保存的信息
+		var  a =	$.cookie("information")
+		console.log(a);
+		
+});

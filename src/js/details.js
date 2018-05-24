@@ -1,15 +1,45 @@
 //商品详情页面内加入购物车
 $(function () {
-    //获取input 里面的数量
-    var num = 0;
-    $("body").on("blur", ".form-control", function () {
-        num = Number($("#exampleInputAmount").val());
-    });
-   // num = Number($("#exampleInputAmount").val());
-    console.log(num);
-    
+   
 
-    //用事件委派
+    // 获取input 里面的数量
+    var num = 1;
+    $("body").on("blur", ".form-control", function () {
+        //判断input内输入值
+        
+        num = Number($("#exampleInputAmount").val());
+
+        var inputAmount = $(this).val();
+       
+        if (!/^[1-9]\d*$/.test(inputAmount)) {
+            //输入有误时  还原默认数字1
+           return  $(this).val("1");
+                
+                
+        };
+    });
+    // 修改加减 + -
+    //事件委派
+    $(".main").on("click",".minus,.add",function(){
+        var a =0;
+        var a = $("#exampleInputAmount").val();
+        if($(this).is(".add")){
+         a++;
+         $("#exampleInputAmount").val(a);
+        } else if($(this).is(".minus")){
+            a--;
+            if(a<=1){
+                $("#exampleInputAmount").val("1");
+            }else{
+
+                $("#exampleInputAmount").val(a);
+            }
+            
+        }
+    });
+
+
+    //用事件委派  加入购物车
     $(".main").on("click", ".add_cart", function (e) {
         e.preventDefault();
         var box = $(".main_right");
@@ -33,6 +63,7 @@ $(function () {
 
         if (index !== -1) {
             //如果购物车已经有该产品 则加上input的数量
+            let num = Number($("#exampleInputAmount").val());
             products[index].amount += num;
         } else {
             currentProduct.amount = num;
@@ -84,5 +115,20 @@ $(function () {
         return -1;
     };
 
+
+
 });
 
+$(function(){
+    //放大镜效果  
+    $(".main").on("mouseenter",".zoom",function(){
+        $(".zoom").elevateZoom({
+            zoomType : "lens",
+            lensShape : "round",
+            containLensZoom : true,
+            lensSize : 300,
+             scrollZoom : true
+        });
+    });
+            
+});

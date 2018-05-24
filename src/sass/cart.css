@@ -66,6 +66,10 @@
   text-align: center;
 }
 
+#cart_list thead .ck_all {
+  cursor: pointer;
+}
+
 #cart_list thead tr th {
   text-align: center;
 }
@@ -75,8 +79,16 @@
   line-height: 50px;
 }
 
+#cart_list #tbody td .ck_prod {
+  cursor: pointer;
+}
+
 #cart_list #tbody .input-group {
   padding-top: 15px;
+}
+
+#cart_list #tbody .input-group .minus, #cart_list #tbody .input-group .add {
+  cursor: pointer;
 }
 
 #cart_list #tbody .input-group .amount {
@@ -89,9 +101,15 @@
   font-weight: 700;
 }
 
-#cart_list tfoot .goon {
+#cart_list tfoot .goon, #cart_list tfoot .topay {
   width: 60px;
   height: 30px;
+}
+
+#cart_list tfoot .goon a, #cart_list tfoot .topay a {
+  color: #ba2620;
+  font-size: 17px;
+  font-style: italic;
 }
 
 tbody tr td img {

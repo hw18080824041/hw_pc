@@ -49,7 +49,7 @@
 			{{ each products prod}}
 			<li>
 				<a href="{{prod.href}}"><img src="{{prod.img}}" class="img-responsive" alt=""></a>
-				<span class="price">{{prod.price}}</span>
+				<span class="price">￥{{prod.price}}</span>
 				<p class="title">{{prod.title}}</p>
 				<p class="add_cart"><a href="javascript:void(0)">{{prod.addcart}}</a></p>
 				<p class="id" style="display:none;">{{prod.pid}}</p>
@@ -73,7 +73,7 @@
 					<a href="{{prod.href}}"><img src="{{prod.img}}" class="img-responsive"></a>
 					<p class="title"><a href="#">{{prod.title}}</a></p>
 					<p>{{prod.capacity}}</p>
-					<p class="price">{{prod.price}}</p>
+					<p class="price">￥{{prod.price}}</p>
 					<a href="#" class="add_cart">{{prod.cart}}</a>
 					<span class="id" style="display: none;">{{prod.pid}}</span>
 				</dd>
@@ -108,9 +108,6 @@
 	<script src="js/index.js"></script>
 	<script src="/js/loadHeaderFooter.js"></script>
 	<script type="text/javascript" src="lib/art-template/template-web.js"></script>
-	<script type="text/javascript">
-		$("#carousel_1").FtCarousel(2, true, 500, true, true);
-	</script>
 </body>
 
 </html>

@@ -23,13 +23,19 @@
 		<script type="text/html" id="detail_temp">
 		{{ each products prod}}
 			<!-- 左边导航 -->
-		<div class="main_left"></div>
+		<div class="main_left">
+				
+						<h4>按种类</h4>
+						<h4>按系列</h4>
+						<h4>按关心问题</h4>
+				
+		</div>
 		<!-- 右 -->
 		<div class="main_right">
 			<!-- 商品图片 -->
 			<p class="id" style="display:none;">{{prod.pid}}</p>
 			<div class="m_pic">
-				<img src="{{prod.img}}" alt="">
+				<img src="{{prod.img}}" class="zoom" data-zoom-image="{{prod.imgbg}}">
 			</div>
 			<div class="introduce">
 				<h4 class="name title">{{prod.name}}</h4>
@@ -47,16 +53,16 @@
 							<form class="form-inline">
 								<div class="form-group">
 									<div class="input-group">
-										<div class="input-group-addon">+</div>
+										<div class="input-group-addon add">+</div>
 										<input type="text" class="form-control" id="exampleInputAmount" value="1">
-										<div class="input-group-addon">-</div>
+										<div class="input-group-addon minus">-</div>
 									</div>
 								</div>
 							</form>
 						</div>
 						<div class="to_buy_up_right">
 							价格 :
-							<span>{{prod.price}}</span>
+							<span>￥{{prod.price}}</span>
 						</div>
 
 					</div>
@@ -89,6 +95,8 @@
 	<!-- 尾部 -->
 	<div class="footerbox"></div>
 	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="/lib/jquery-plugins/jquery.elevateZoom-3.0.8.min.js"></script>
+
 	<script src="/lib/jquery-plugins/jquery.cookie.js"></script>
 	<script src="/lib/jquery-plugins/jquery.fly.min.js"></script>
 	<script src="/js/detail_2.js"></script>

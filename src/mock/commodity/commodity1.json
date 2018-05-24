@@ -3,7 +3,8 @@
 	"res_error":"",
 	"res_body":{
 		"products":[
-            {"img":"/images/haha1.jpg",
+			{"img":"/images/lalamd.jpg",
+				"imgbg":"/images/lalabg.jpg",
 			"title":"新透白美肌祛斑精华液套装",
 			"rongliang":"150mL",
 			"xq":" 提拉、紧致、抚纹、白皙，塑造多维青春容颜，从此无惧时光印迹。",

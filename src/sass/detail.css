@@ -9,9 +9,17 @@
 
 .main .main_left {
   width: 138px;
-  height: 100px;
-  background: #ccc;
+  min-height: 100px;
+  padding-left: 20px;
   float: left;
+}
+
+.main .main_left h4 {
+  font-weight: normal;
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  background: url(/images/arrow_left1.jpg) no-repeat right center;
 }
 
 .main .main_right {

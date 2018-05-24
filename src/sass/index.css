@@ -159,10 +159,10 @@ a {
   background: #eeebeb;
   z-index: 999;
   display: none;
-  padding-left: 5px;
 }
 
 .header_footer .nav .nav_right form .suggest div {
+  padding-left: 10px;
   height: 25px;
   line-height: 25px;
 }
@@ -300,6 +300,7 @@ a {
 
 .content1 .con1_wrap li img {
   width: 240px;
+  height: 176.47px;
 }
 
 /* content2 */
